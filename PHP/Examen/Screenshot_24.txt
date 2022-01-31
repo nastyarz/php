@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<body>
+    <div>   
+        <form action="exx.php" method="POST">
+            <div>
+                <input type="checkbox" name="java" value="JAVA">               
+                <label for="java">JAVA</label>
+            </div><br>
+
+            <div>
+                <input type="checkbox" name="html" value="HTML">
+                <label for="html">HTML</label>
+            </div><br>   
+
+            <div>
+                <input type="checkbox" name="php" value="PHP">   
+                <label for="php">PHP</label>
+            </div><br>
+
+            <div>   
+                <label for="nume" style="margin-right: 2%;">Nume</label>
+                <input type="text" name="nume">           
+            <div><br>
+
+            <div>   
+                <label for="prenume" style="margin-right: 1%;">Prenume</label>
+                <input type="text" name="prenume">           
+            <div><br>
+           
+            <div>   
+                <label for="varsta" style="margin-right: 2%;">Varsta</label>
+                <input type="text" name="varsta">           
+            <div><br>       
+            <br>
+            <input type="submit" name="" value="Trimite date">
+        </form>
+    </div>   
+</body>
+</html>
+
+
+<?php  
+        if (isset($_POST["java"]) ||
+            isset($_POST["html"]) ||
+            isset($_POST["php"]) &&
+            isset($_POST["nume"]) &&
+            isset($_POST["prenume"]) &&
+            isset($_POST["varsta"])) {
+            echo "Limbajele alese: ";
+            if (isset($_POST["java"])) {
+                echo "JAVA ";
+            }
+            if (isset($_POST["HTML"])) {
+                echo "HTML ";
+            }
+            if (isset($_POST["PHP"])) {
+                echo "PHP ";
+            }
+            echo "<br>";
+            if (isset($_POST["nume"])) {
+                echo "Nume ". $_POST["nume"]. "<br>";
+            }
+            if (isset($_POST["prenume"])) {
+                echo "Prenume ". $_POST["prenume"]. "<br>";
+            }
+            if (isset($_POST["varsta"])) {
+                echo "Varsta ". $_POST["varsta"]. "<br>";
+            }
+        } else {
+            header("Location: l4p1.html");
+        }
+    ?>

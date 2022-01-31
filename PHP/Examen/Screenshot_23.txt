@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<body>
+    <?php 
+        $primul_array = array("unu", "doi");
+        $al_doilea_array = array("trei", "patru", "cinci");
+        $al_treilea_array = array_merge($primul_array, $al_doilea_array);
+        print_r($al_doilea_array);
+    ?>
+</body>
+</html>
